@@ -1,0 +1,163 @@
+:root {
+    --color-primary: rgb(255, 255, 0);
+    --color-secondary: rgb(192, 192, 192);
+    --color-dark-background: rgb(0, 0, 51);
+    --color-light-background: rgb(224, 224, 224);
+    --color-highlight: rgb(0, 255, 255);
+    --color-notification: rgb(75, 0, 130);
+    --color-interactive: rgb(255, 0, 255);
+    --color-critical: rgb(255, 0, 0);
+    font-family: "OCR A Std", "Courier New", monospace;
+  }
+  
+  @font-face {
+    font-family: 'Square Sans Serif 7';
+    src: url('../assets/square_sans_serif_7.ttf') format('truetype');
+  }
+
+body {
+    background-color: var(--color-light-background);
+}
+
+.nav-container {
+    align-items: center;
+    display: flex;
+    height:64px;
+    margin: 0 auto;
+    max-width: 1272px;
+    position: relative;
+    width: 100%;
+    padding: 0 36px;
+}
+
+.logo-container {
+    align-items: center;
+    display: flex;
+    height: 64px;
+    min-height: 64px;
+    position: relative;
+    margin-right: 40px;
+}
+
+.header-logo {
+    display: flex;
+    font-size: 29px;
+    line-height: 29px;
+    max-width: 100%;
+    color: var(--color-interactive);
+    font-family: 'Square Sans Serif 7', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 2px 2px 4px var(--color-highlight);
+}
+
+.nav-links {
+    height: 100%;
+    display: flex;
+}
+
+.nav-link {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    color: var(--color-secondary);
+    display: flex;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    color: var(--color-dark-background);
+}
+
+
+.home-about {
+    display: flex;
+    padding: 0 36px;
+}
+
+.about-blurb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    margin: 0;
+    max-width: 42%;
+    text-align: left;
+    top: 85px;
+    z-index: 1;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-header {
+    color: var(--color-dark-background);
+    margin: 0 0 16px;
+    padding: 0;
+    font-weight: 300;
+    font-size: 44px;
+    line-height: 56px;
+}
+
+
+.about-blurb p{
+    color: var(--color-notification);
+    line-height: 1.5;
+    margin: 0 0 16px;
+    padding: 0;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.about-more {
+    margin-bottom: 8px;
+    display: block;
+    width: auto;
+}
+
+.about-more-link{
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600px;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 11px 64px;
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-interactive);
+    transition: .2s;
+    transition-property: background-color,border-color,color;
+}
+
+.about-more-link:hover{
+    background: var(--color-notification);
+    border-color: var(--color-notification);
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+   }
+
+.about-image img {
+    display: block;
+    width: 100%; /* Ensure the image fills the width of the container */
+    height: auto; /* Let the height adjust proportionally */
+}
+
+
