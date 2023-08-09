@@ -271,7 +271,211 @@ section {
     font-size: 14px;
     justify-content: center;
     line-height: 20px;
-    padding-right: 20px;
+}
 
+.hero-carousel {
+    position: relative;
+    background-color: #000;
+    color: white;
+    overflow: hidden;
+    height: 400px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+
+.slide-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.slide-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.slide-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.carousel-control.prev {
+    left: 20px;
+}
+
+.carousel-control.next {
+    right: 20px;
+}
+
+.carousel-control:hover {
+    opacity: 0.8;
+}
+
+.carousel-slide:nth-child(even) .slide-content {
+    order: 2; /* Change the order for even slides */
+    padding-left: 60px; /* Adjust spacing on the left */
+    padding-right: 0; /* Reset right padding */
+    text-align: left; /* Align text to the left */
+}
+
+.carousel-slide:nth-child(even) img {
+    order: 1; /* Change the order for even slides */
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-slide:nth-child(even) .alternate-content {
+    background-color: var(--color-notification); /* Different background color for even slides */
+}
+
+
+
+.top-sellers {
+    padding: 40px 0;
+}
+
+.top-sellers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.top-seller-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-seller-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.top-seller-title {
+    font-size: 18px;
+    color: var(--color-dark-background);
+    margin-bottom: 6px;
+    text-decoration: none;
+    display: block;
+}
+
+.top-seller-price {
+    font-size: 16px;
+    color: var(--color-notification);
+    margin-right: 6px;
+}
+
+.top-seller-button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.products {
+    padding: 40px 0;
+}
+
+.product-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-category {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--color-dark-background);
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.product-category.active {
+    color: var(--color-primary);
+}
+
+.product-carousel {
+    /* Style your product carousel here */
+}
+
+.category-list {
+    background-color: var(--color-light-background);
+    padding: 40px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    text-align: center;
+}
+
+.category-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+.category-title {
+    font-size: 16px;
+    color: var(--color-dark-background);
 }
 
